@@ -1,0 +1,54 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNS Tourism.Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tourism Management System</h1>
+    <h2>KNSA Tourism</h2>
+    <div class="login-container">
+        <h3>Login</h3>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username"placeholder="username">  Username 
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="sign up.html">SignUP</a></p>
+        </form>
+    </div>
+    <script>
+		const form = document.getElementById('login-form');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			const username = document.getElementById('username').value;
+			const password = document.getElementById('password').value;
+
+			if (username === 'kishor' && password === '123456') {
+                window.location.href='homepage.html';
+			}
+            else if(username === 'nithin'|| password === '123456'){
+                window.location.href='homepage.html';
+            }
+            else if (username === 'saravana'|| password ==='123456') {
+                window.location.href='homepage.html';
+            }
+            else if (username === 'anish'|| password ==='123456') {
+                window.location.href='homepage.html';
+            }
+            else {
+			    alert('Invalid username or password');
+			}
+		});
+	</script>
+</body>
+</html>
